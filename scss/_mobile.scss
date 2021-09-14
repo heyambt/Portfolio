@@ -1,0 +1,155 @@
+
+
+// Wide screen
+@include mediaXLarge {
+    .project-container {
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+}
+
+
+// Desktop & Laptop
+@include mediaLarge{
+    margin-top: 10vh;
+
+
+    .project-container {
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+}
+
+
+// Tablet
+@include mediaMedium {
+    main {
+        align-items: center;
+        text-align: center;
+
+        .large-heading {
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+   }
+
+   ul.menu-nav,
+   div.menu-branding {
+       float: none;
+       width: 100%;
+       min-height: 0;
+      
+       
+
+       &.show {
+           transform: translate3d(0,0,0) ;
+       }
+   }
+
+   .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px;
+   }
+
+   h1 {
+
+    &.large-heading {
+        font-size: 3.3rem;
+    }
+       
+}
+
+    h2 {
+        &.small-heading {
+            font-size: 2rem;
+
+    }
+    }
+   
+
+   .menu-branding {
+       height: 25vh;
+       transform: translate3d(100%, 0, 0);
+
+    // make my picture smaller
+       .picture {
+           background: url('../img/mypc-sm.jpg');
+           background-repeat: no-repeat;
+           background-size: cover;
+           width: 125px;
+           height: 125px;       
+       }
+   }
+   
+   .about-info {
+       grid-template-areas: 
+       'bioimg'
+       'bio'
+       'bio'
+       'job1'
+       'job2'
+       'job3';
+
+       grid-template-columns: 1fr;
+       
+       .job-1, .job-2 {
+   
+        border-right: none;
+        border-bottom: $secondary-color 2px solid;
+    
+    }
+    
+  
+   }
+
+   .project-container {
+    grid-template-columns: 1fr;
+    
+}
+
+}
+
+
+// Phones
+@include mediaSmall {
+    main#home h1 {
+        margin-top: 10vh;
+
+  
+    }
+    .project-container {
+        grid-template-columns: 1fr;
+        
+    }
+
+    h1 {
+
+        &.large-heading {
+            font-size: 2rem;
+        }
+           
+    }
+
+    h2 {
+        font-size: 2rem;
+
+        &.small-heading {
+            font-size: 1.2rem;
+    
+    }
+    }
+        .my-work {
+
+            h2 {
+                font-size: 1.4rem;
+            }
+            h3 {
+                font-size: 1rem;
+            }
+        }
+        
+    
+   
+
+}
